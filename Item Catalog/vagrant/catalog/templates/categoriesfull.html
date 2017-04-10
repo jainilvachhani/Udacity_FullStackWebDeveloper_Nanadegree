@@ -1,0 +1,14 @@
+<html>
+<body>
+<a href='{{url_for('showLogin') }}'>Login</a>
+<a href='{{url_for('gdisconnect') }}'>Logout</a><br>
+<h1> Cateogories </h1>
+<ul>
+{% for i in category %}
+<li><a href = '{{url_for('showCategories', category_id = i.id) }}'>{{i.name}}</a></li>
+{% endfor %}
+
+
+
+</body>
+</html>
